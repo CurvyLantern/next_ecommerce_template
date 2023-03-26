@@ -10,7 +10,7 @@ export default function PrimaryProductCard() {
 					src='https://images.pexels.com/photos/3385662/pexels-photo-3385662.jpeg'
 					alt='Mountain'
 					width={500}
-                    height={500}
+					height={500}
 				/>
 				<div className='px-6 py-4'>
 					<div className='font-bold text-xl mb-2'>Mountain</div>
