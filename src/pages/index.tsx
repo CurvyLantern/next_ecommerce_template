@@ -23,6 +23,7 @@ const HomePage: NextPage<HomePageProps> = () => {
       <Container className='h-52 my-10 bg-gray-800 text-center text-white'>
         Various collections
       </Container>
+
       <>
         <div className='flex'>
           {[...Array(4)].map((product, index) => (
