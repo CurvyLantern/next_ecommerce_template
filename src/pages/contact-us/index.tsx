@@ -18,7 +18,7 @@ const info = [
   },
 ];
 
-const index = () => {
+const ContactPage = () => {
   return (
     <div className=" ">
       <div className="w-full flex flex-col justify-center items-center">
@@ -218,4 +218,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default ContactPage;
