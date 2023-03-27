@@ -16,12 +16,19 @@ const PrimaryProductCard: NextPage<PrimaryProductCardProps> = ({
 	horizontal,
 	contentInside,
 }) => {
+	const handleModalOpen = ()=>{
+		const modal = document.getElementById('productQuickViewModal');
+		modal.checked = true;
+	}	
 	return (
-		<div className='p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5'>
+		<div
+			onClick={handleModalOpen}
+			className='p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5'
+		>
 			<div
 				className={`${
 					styles.productCard
-				} rounded-lg overflow-hidden shadow-lg dark:shadow-gray-800  cursor-pointer ${
+				} rounded-lg overflow-hidden shadow-lg dark:shadow-gray-300  cursor-pointer ${
 					horizontal
 						? 'flex justify-center items-start w-full col-span-3'
 						: 'w-80'
@@ -59,7 +66,7 @@ const PrimaryProductCard: NextPage<PrimaryProductCardProps> = ({
 						Mountain Road
 					</div>
 					<p
-						className={` dark:text-gray-300 text-base ${
+						className={` dark:text-gray-700 text-base ${
 							contentInside
 								? 'text-gray-300 mt-2'
 								: 'text-gray-700'
