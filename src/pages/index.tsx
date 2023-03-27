@@ -57,9 +57,16 @@ const HomePage: NextPage<HomePageProps> = ({ title }) => {
 		//   </div>
 		// </div>
 		<>
-			<PrimaryProductCard horizontal={false} contentInside={false} />
+			<div className='flex'>
+				{[...Array(4)].map((product, index) => (
+					<PrimaryProductCard
+						key={index}
+						horizontal={false}
+						contentInside={3 % (index + 1) !== 0 ? true : false}
+					/>
+				))}
+			</div>
 			<PrimaryProductCard horizontal={true} contentInside={false} />
-			<PrimaryProductCard contentInside={true} horizontal={false} />
 		</>
 	);
 };

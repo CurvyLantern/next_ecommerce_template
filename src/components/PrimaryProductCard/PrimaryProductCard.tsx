@@ -29,7 +29,7 @@ const PrimaryProductCard: NextPage<PrimaryProductCardProps> = ({
 					contentInside && 'bg-center bg-no-repeat bg-cover relative'
 				}`}
 			>
-				<div className='overflow-hidden'>
+				<div className={`overflow-hidden ${contentInside && 'h-full'}`}>
 					<Image
 						className={`h-80 object-cover hover:scale-[1.02] transition-all ${
 							horizontal ? 'w-80' : 'w-full'
@@ -52,7 +52,7 @@ const PrimaryProductCard: NextPage<PrimaryProductCardProps> = ({
 					}`}
 				>
 					<div
-						className={`font-bold text-xl  link-hover ${
+						className={`font-bold text-xl link-hover ${
 							contentInside ? 'text-white mb-0' : 'mb-2'
 						}`}
 					>
