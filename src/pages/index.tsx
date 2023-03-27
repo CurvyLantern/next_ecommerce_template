@@ -1,5 +1,8 @@
 import { notify } from "@/libs/toast";
 import { GetServerSideProps, NextPage } from "next/types";
+import PrimaryProductCard from "@/components/PrimaryProductCard";
+import { notify } from "@/libs/toast";
+import { GetServerSideProps, NextPage } from "next/types";
 
 export const getServerSideProps: GetServerSideProps<{
   title: string;
