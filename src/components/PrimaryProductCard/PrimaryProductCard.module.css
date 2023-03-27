@@ -12,4 +12,12 @@
 }
 .productCard:hover .image{
     transform: scale(1.02);
+    filter: blur(4px);
+}
+.cardBtn{
+    transform: translateY(-50px);
+    transition: all .3s;
+}
+.productCard:hover .cardBtn{
+    transform: translateY(0px);
 }

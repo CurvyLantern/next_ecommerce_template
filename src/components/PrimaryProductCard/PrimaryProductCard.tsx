@@ -29,15 +29,19 @@ const PrimaryProductCard: NextPage<PrimaryProductCardProps> = ({
 					contentInside && 'bg-center bg-no-repeat bg-cover relative'
 				}`}
 			>
-				<Image
-					className={`h-80 object-cover hover:scale-[1.02] transition-all ${
-						horizontal ? 'w-80' : 'w-full'
-					} ${contentInside && `w-full h-full z-0 ${styles.image}`}`}
-					src='https://images.pexels.com/photos/3385662/pexels-photo-3385662.jpeg'
-					alt='Mountain'
-					width={500}
-					height={50}
-				/>
+				<div className='overflow-hidden'>
+					<Image
+						className={`h-80 object-cover hover:scale-[1.02] transition-all ${
+							horizontal ? 'w-80' : 'w-full'
+						} ${
+							contentInside && `w-full h-full z-0 ${styles.image}`
+						}`}
+						src='https://images.pexels.com/photos/1658967/pexels-photo-1658967.jpeg'
+						alt='Mountain'
+						width={500}
+						height={50}
+					/>
+				</div>
 				{contentInside && (
 					<div className='absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent'></div>
 				)}
@@ -52,7 +56,7 @@ const PrimaryProductCard: NextPage<PrimaryProductCardProps> = ({
 							contentInside ? 'text-white mb-0' : 'mb-2'
 						}`}
 					>
-						Adidas Shoes Black
+						Mountain Road
 					</div>
 					<p
 						className={` dark:text-gray-300 text-base ${
@@ -72,7 +76,7 @@ const PrimaryProductCard: NextPage<PrimaryProductCardProps> = ({
 					>
 						<span className='text-xl font-bold'>$45</span>{' '}
 						<span
-							className={`line-through  font-semibold text-lg dark:text-gray-400 ${
+							className={`line-through  font-semibold text-sm dark:text-gray-400 ${
 								contentInside
 									? 'text-gray-400'
 									: 'text-gray-600'
@@ -83,7 +87,7 @@ const PrimaryProductCard: NextPage<PrimaryProductCardProps> = ({
 					</div>
 					<button
 						className={`text-base cursor-pointer mt-2 font-semibold ${
-							contentInside && 'text-white'
+							contentInside && `text-white ${styles.cardBtn}`
 						}`}
 					>
 						Shop Now &rarr;{' '}
