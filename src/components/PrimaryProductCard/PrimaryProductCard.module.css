@@ -1,0 +1,23 @@
+.productFooter{
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all .3s;
+}
+.productCard:hover .productFooter{
+    opacity: 1;
+    transform: translateX(0px);
+}
+.image{
+    transform: scale(1);
+}
+.productCard:hover .image{
+    transform: scale(1.02);
+    filter: blur(4px);
+}
+.cardBtn{
+    transform: translateY(-50px);
+    transition: all .3s;
+}
+.productCard:hover .cardBtn{
+    transform: translateY(0px);
+}
