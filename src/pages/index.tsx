@@ -1,4 +1,4 @@
-import PrimaryProductCard from '@/components/PrimaryProductCard';
+import PrimaryProductCard from '@/components/PrimaryProductCard/PrimaryProductCard';
 import { notify } from '@/libs/toast';
 import { GetServerSideProps, NextPage } from 'next/types';
 
@@ -56,7 +56,11 @@ const HomePage: NextPage<HomePageProps> = ({ title }) => {
 		//     </button>
 		//   </div>
 		// </div>
-		<PrimaryProductCard />
+		<>
+			<PrimaryProductCard horizontal={false} contentInside={false} />
+			<PrimaryProductCard horizontal={true} contentInside={false} />
+			<PrimaryProductCard contentInside={true} horizontal={false} />
+		</>
 	);
 };
 
