@@ -1,6 +1,9 @@
 import PrimaryProductCard from '@/components/PrimaryProductCard/PrimaryProductCard';
 import { notify } from '@/libs/toast';
 import { GetServerSideProps, NextPage } from 'next/types';
+import Container from '@/components/containers/Container';
+import Footer from '@/components/Footers/Footer';
+import Header from '@/components/Headers/Header';
 
 export const getServerSideProps: GetServerSideProps<{
 	title: string;
@@ -16,59 +19,38 @@ export const getServerSideProps: GetServerSideProps<{
 interface HomePageProps {
 	title: string;
 }
-const HomePage: NextPage<HomePageProps> = ({ title }) => {
+const HomePage: NextPage<HomePageProps> = () => {
 	return (
-		// <div className='bg-white py-10 h-screen text-center'>
-		//   <h1 className='text-blue-400 text-5xl my-10'>{title}</h1>
-
-		//   <header className='text-3xl'>
-		//     <h2 className='font-roboto'>
-		//       Roboto font : server side rendered by next font.
-		//     </h2>
-		//     <h2 className='font-inter'>
-		//       Inter font : server side rendered by next font.
-		//     </h2>
-		//   </header>
-		//   <p className='text-xl p-2 text-black'>Here are some Daisy ui buttons</p>
-
-		//   <div className='flex items-center justify-around '>
-		//     <button
-		//       onClick={() => {
-		//         notify('hey there i am a toast ');
-		//       }}
-		//       className='btn btn-outline btn-info'>
-		//       Info
-		//     </button>
-		//     <button
-		//       onClick={() => {
-		//         notify.success('hey there i am a toast ');
-		//       }}
-		//       className='btn btn-outline btn-success'>
-		//       Success
-		//     </button>
-		//     <button className='btn btn-outline btn-warning'>Warning</button>
-		//     <button
-		//       onClick={() => {
-		//         notify.error('hey there i am a toast ');
-		//       }}
-		//       className='btn btn-outline btn-error'>
-		//       Error
-		//     </button>
-		//   </div>
-		// </div>
 		<>
-			<div className='flex'>
-				{[...Array(4)].map((product, index) => (
-					<PrimaryProductCard
-						key={index}
-						horizontal={false}
-						contentInside={3 % (index + 1) !== 0 ? true : false}
-					/>
-				))}
+			{/* a common header  */}
+			<Header />
+
+			{/* Slider */}
+			<div className='h-72 bg-gray-800 text-center text-white'>
+				Slider will go here
 			</div>
-			<PrimaryProductCard horizontal={true} contentInside={false} />
+
+			{/* show collection */}
+			<Container className='h-52 my-10 bg-gray-800 text-center text-white'></Container>
+
+			{/* TODO: this is just for demo purposes */}
+			{/* show Demo products */}
+			<div>
+				<div className='flex'>
+					{[...Array(4)].map((product, index) => (
+						<PrimaryProductCard
+							key={index}
+							horizontal={false}
+							contentInside={3 % (index + 1) !== 0 ? true : false}
+						/>
+					))}
+				</div>
+				<PrimaryProductCard horizontal={true} contentInside={false} />
+			</div>
+
+			{/* a common footer */}
+			<Footer />
 		</>
 	);
 };
-
 export default HomePage;
