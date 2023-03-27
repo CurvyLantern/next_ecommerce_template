@@ -39,5 +39,4 @@ const HomePage: NextPage<HomePageProps> = () => {
     </>
   );
 };
-
 export default HomePage;
