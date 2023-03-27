@@ -1,7 +1,7 @@
 import Container from '@/components/containers/Container';
 import Footer from '@/components/Footers/Footer';
 import Header from '@/components/Headers/Header';
-import PrimaryProductCard from '@/components/PrimaryProductCard';
+import PrimaryProductCard from '@/components/PrimaryProductCard/PrimaryProductCard';
 import { NextPage } from 'next/types';
 
 // typescript interface
@@ -24,15 +24,18 @@ const HomePage: NextPage<HomePageProps> = () => {
         Various collections
       </Container>
 
-      {/* TODO: this is just for demo purposes */}
-      {/* show Demo products */}
-      <div>
-        {Array(20)
-          .fill(0)
-          .map((_, index) => {
-            return <PrimaryProductCard key={index} />;
-          })}
-      </div>
+      <>
+        <div className='flex'>
+          {[...Array(4)].map((product, index) => (
+            <PrimaryProductCard
+              key={index}
+              horizontal={false}
+              contentInside={3 % (index + 1) !== 0 ? true : false}
+            />
+          ))}
+        </div>
+        <PrimaryProductCard horizontal={true} contentInside={false} />
+      </>
 
       {/* a common footer */}
       <Footer />
