@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 export default function ProductQuickViewModal() {
@@ -115,9 +116,13 @@ export default function ProductQuickViewModal() {
 											Add to cart
 										</button>
 									</div>
-									<button className='h-11 md:h-12 py-2 md:w-6/12 xl:w-full  rounded-md bg-indigo-600 px-3.5  text-base font-semibold leading-7 text-white hover:bg-indigo-500'>
-										View Details
-									</button>
+									<div>
+										<Link href={'/products/33'}>
+											<button className='h-11 md:h-12 py-2 md:w-6/12 xl:w-full  rounded-md bg-indigo-600 px-3.5  text-base font-semibold leading-7 text-white hover:bg-indigo-500'>
+												View Details
+											</button>
+										</Link>
+									</div>
 								</div>
 							</div>
 						</div>
