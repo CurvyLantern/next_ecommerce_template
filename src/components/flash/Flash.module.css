@@ -1,0 +1,4 @@
+.flashEffect {
+transition: transform 700ms;
+  transform: translateX(100%);
+}
