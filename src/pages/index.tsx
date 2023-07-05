@@ -1,3 +1,4 @@
+import Banner from '@/components/Banner/Banner';
 import Container from '@/components/containers/Container';
 import Footer from '@/components/Footers/Footer';
 import Header from '@/components/Headers/Header';
@@ -15,12 +16,12 @@ const HomePage: NextPage<HomePageProps> = () => {
       <Header />
 
       {/* Slider */}
-      <div className='h-72 bg-gray-800 text-center text-white'>
-        Slider will go here
+      <div className='text-center text-white'>
+        <Banner></Banner>
       </div>
 
       {/* show collection */}
-      <Container className='h-52 my-10 bg-gray-800 text-center text-white'>
+      <Container className=' text-center text-white'>
         Various collections
       </Container>
 
