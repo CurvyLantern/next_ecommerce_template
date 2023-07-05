@@ -1,5 +1,6 @@
 import Banner from '@/components/Banner/Banner';
 import Container from '@/components/containers/Container';
+import Cta from '@/components/Cta/cta';
 import Footer from '@/components/Footers/Footer';
 import Header from '@/components/Headers/Header';
 import PrimaryProductCard from '@/components/PrimaryProductCard/PrimaryProductCard';
@@ -37,7 +38,7 @@ const HomePage: NextPage<HomePageProps> = () => {
         </div>
         <PrimaryProductCard horizontal={true} contentInside={false} />
       </>
-
+            <Cta></Cta>
       {/* a common footer */}
       <Footer />
     </>
